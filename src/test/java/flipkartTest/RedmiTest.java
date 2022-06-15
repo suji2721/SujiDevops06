@@ -12,8 +12,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
-
-public class HomePage<Webdriver> {
+public class RedmiTest {
 	
 	WebDriver driver;
 	@Test(priority = 1)
@@ -62,13 +61,13 @@ public class HomePage<Webdriver> {
 	}
 	
 	@Test(priority = 6)
-	public void redmiGoPage() throws Exception {
+	public void redmiPage() throws Exception {
 					
 					driver.findElement(By.xpath("//input[@class=\"_3704LK\"]")).sendKeys("Redmi 9A Sport (Carbon Black, 32 GB)");
 					driver.findElement(By.xpath("//input[@class=\"_3704LK\"]//following::button[1]")).click();
 					Thread.sleep(2000);
 	}
-			    @Test(priority = 8)
+			    @Test(priority = 7)
 			    public void clickOnVideo() throws Exception   {
 			    	
 			    	Dimension d = new Dimension(600, 650);
@@ -163,11 +162,15 @@ public class HomePage<Webdriver> {
 		      
 			    
 			    }
+			    
+			    @Test(priority = 8)
+				public void close() {
+					
+					driver.close();
+					driver.quit();
+}
 }
 			    
 				
-	
-	
 
-	
-	
+
