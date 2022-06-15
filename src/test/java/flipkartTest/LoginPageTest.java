@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 public class LoginPageTest {
 	
 	WebDriver driver;
-	@Test(priority = 1)
+	@Test(priority = 0)
 	public void openBrowser() throws Exception {
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\sreen\\Selenium\\drivers\\chromedriver3.exe");
@@ -18,7 +18,7 @@ public class LoginPageTest {
 	        driver.manage().window().maximize();
 		
 	}
-	@Test(priority = 2)
+	@Test(priority = 1)
 	public void openUrl() throws Exception {
 	
 				driver.get("https://www.flipkart.com/");
